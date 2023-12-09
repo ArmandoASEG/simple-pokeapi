@@ -20,10 +20,9 @@
   color: rgb(85, 85, 85);
 
 }
+
 .card {
   background: rgba(217, 217, 217, 0.50);
-  
-
   
 }
 .card img {
@@ -52,7 +51,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18.9375rem, 1fr));
   gap: 0.875rem;
-  transition:all 1s ease-in;
+  
   
 }
 .btn-pagination {
@@ -61,6 +60,14 @@
   font-size: 1rem;
   letter-spacing: 1px;
   line-height: normal;
+  transition: all .2s ease-in-out;
+}
+.btn-pagination:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px 1px rgb(219, 219, 219);
+  background-color: #ff8800;
+  color: #fff;
+ 
 }
 .btn-number {
   font-family: 'raleway';

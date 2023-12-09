@@ -8,30 +8,30 @@ import '../index.css'
 
 export function Gallery() {
 
-  const [ limit, setLimit ] = useState(9)
+  const limit = 9 //  limit of pokemons that must be seen on the grid
   const [ offset, setOffset ] = useState(0)
-  const [ number, setNumber ] = useState(1)
-  const { data } = useFetch(limit, offset)
+  const [ idPage, setIdPage ] = useState(1) //state from identificator page
+  const { data } = useFetch(limit, offset) 
+  
 
   const nextPage = () => {
-   if( offset <= 8*9){
-    setLimit((9))
+   if( offset <= 8 * limit){
     setOffset((offset + limit))
-    setNumber(number + 1)
+    setIdPage(idPage + 1) 
    }
   }
 
   const prevPage = () => {
-    if ( 9 <= offset) {
+    if ( limit <= offset) {
     setOffset(offset - limit)
-    setNumber(number - 1)
+    setIdPage(idPage - 1)
    }
  }
   return (
 
     <>
 
-      <section className=' gallery-main max-w-[63.5625rem] mx-auto mt-[4.06rem] mb-[4.06rem]'>
+      <section className=' gallery-main max-w-[63.5625rem] mx-auto mt-[4.06rem] mb-[4.06rem]'> 
 
         {data && data.map( (pokemon) => (
          <Card
@@ -50,7 +50,7 @@ export function Gallery() {
 
         prevPage={() => prevPage(offset)}
         nextPage={() => nextPage(limit)}
-        number={number}
+        number={idPage}
 
       />
 
