@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  
+  background: linear-gradient(242deg, #CECECE -0.11%, #413EFF -0.1%, #ECFF00 100.91%);
+  background-repeat: no-repeat;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.seeker {
+  font-family:'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(85, 85, 85);
+
+}
+.card {
+  background: rgba(217, 217, 217, 0.50);
+  
+
+  
+}
+.card img {
+  filter: 
+  drop-shadow(0px 0px 8px rgb(73, 72, 72));
+  
+}
+.ph-name {
+  font-family: 'Raleway';
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  background: rgba(81, 0, 253, 0.69);
+  color: #FFF;
+}
+.ph-weight {
+  font-family: 'Raleway';
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #FFF;
+}
+.gallery-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.9375rem, 1fr));
+  gap: 0.875rem;
+  transition:all 1s ease-in;
+  
+}
+.btn-pagination {
+  font-family: 'raleway';
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: normal;
+}
+.btn-number {
+  font-family: 'raleway';
+  font-weight: 300;
+}
+  
+
