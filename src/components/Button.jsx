@@ -1,7 +1,6 @@
 import '../index.css'
 
-export function Button({ number, prevPage, nextPage }) {
-  
+export function Button ({ number, prevPage, nextPage }) {
   return (
 
     <div className=" flex justify-center mb-[3.46rem] gap-8 items-center">

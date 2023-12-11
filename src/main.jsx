@@ -14,7 +14,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Seeker/>
     <Gallery/>
 
-
-
   </>
 )
