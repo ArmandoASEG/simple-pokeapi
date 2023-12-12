@@ -5,7 +5,7 @@ Version 1.0
 ✅ -  principal layuot of pokedex.
 ✅ - New system of pagination.
 
-Version 2.0
+Version 2.0 (comming soon)
 --------------------------------------
 🕑 - creating a new system of filtering.
 🕑 - add a animation for states of application.
