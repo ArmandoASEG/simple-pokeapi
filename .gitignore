@@ -6,11 +6,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+stepstofollow.md
 
 node_modules
 dist
 dist-ssr
-stepstofollow.md
+
 *.local
 
 # Editor directories and files

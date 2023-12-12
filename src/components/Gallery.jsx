@@ -1,14 +1,17 @@
 import { Card } from '../components/Card'
 import { Button } from '../components/Button'
-import { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
+import { LIMIT_DRAFT } from '../constants.js'
+
 import '../index.css'
 
+import { useState } from 'react'
+
 export function Gallery () {
-  const LIMIT_DRAFT = 9 //  limit of pokemons that must be seen on the grid
   const [offset, setOffset] = useState(0)
   const [idPage, setIdPage] = useState(1) //  state from identificator page
-  const { data } = useFetch(LIMIT_DRAFT, offset)
+
+  const { data, loading } = useFetch(LIMIT_DRAFT, offset)
 
   const nextPage = () => {
     if (offset <= 8 * LIMIT_DRAFT) {
@@ -36,6 +39,7 @@ export function Gallery () {
             name={pokemon.name}
             img={pokemon.sprites.other.dream_world.front_default}
             weight={pokemon.weight}
+            loading={loading}
           />
 
         ))}
@@ -44,8 +48,8 @@ export function Gallery () {
 
       <Button
 
-        prevPage={() => prevPage(offset)}
-        nextPage={() => nextPage(LIMIT_DRAFT)}
+        prevPage={prevPage}
+        nextPage={nextPage}
         number={idPage}
 
       />
