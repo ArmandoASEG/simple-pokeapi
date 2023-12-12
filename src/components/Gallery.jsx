@@ -2,30 +2,13 @@ import { Card } from '../components/Card'
 import { Button } from '../components/Button'
 import { useFetch } from '../hooks/useFetch'
 import { LIMIT_DRAFT } from '../constants.js'
+import { usePagination } from '../hooks/usePagination'
 
 import '../index.css'
 
-import { useState } from 'react'
-
 export function Gallery () {
-  const [offset, setOffset] = useState(0)
-  const [idPage, setIdPage] = useState(1) //  state from identificator page
-
+  const { nextPage, prevPage, idPage, offset } = usePagination()
   const { data, loading } = useFetch(LIMIT_DRAFT, offset)
-
-  const nextPage = () => {
-    if (offset <= 8 * LIMIT_DRAFT) {
-      setOffset((offset + LIMIT_DRAFT))
-      setIdPage(idPage + 1)
-    }
-  }
-
-  const prevPage = () => {
-    if (LIMIT_DRAFT <= offset) {
-      setOffset(offset - LIMIT_DRAFT)
-      setIdPage(idPage - 1)
-    }
-  }
 
   return (
 
